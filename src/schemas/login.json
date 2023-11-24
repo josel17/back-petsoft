@@ -1,0 +1,24 @@
+
+
+{
+    "type": "object",
+    "properties": 
+    {
+      "username":{ "$ref": "#/definitions/string" },
+      "password":{ "$ref": "#/definitions/string" }
+    },
+    "required": ["username","password"], 
+  "definitions": {
+      "string": {
+          "type": "string",
+          "minLength": 1
+      },
+      "is-number": {
+          "type": "integer"
+      },
+      "is-email": {
+          "type": "string"
+      }
+    }
+  }
+  

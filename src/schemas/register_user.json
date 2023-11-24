@@ -1,0 +1,35 @@
+
+
+{
+    "type": "object",
+    "properties": {
+          
+            "fullName":{ "$ref": "#/definitions/string" },
+            "lastName1":{ "$ref": "#/definitions/string" },
+           
+            "documentTypeId":{ "$ref": "#/definitions/is-number" },
+            "documentNumber":{ "$ref": "#/definitions/string" },
+            "genderId":{ "$ref": "#/definitions/is-number" },
+            "email":{ "$ref": "#/definitions/is-email" },
+            "companyId":{ "$ref": "#/definitions/is-number" },
+            "status":{ "$ref": "#/definitions/is-number" }          
+    }, 
+    "required": ["fullName","lastName1","documentTypeId","documentNumber","genderId","email","companyId","status"],
+  "definitions": {
+      "string": {
+          "type": "string",
+          "minLength": 1
+      },
+      "is-number": {
+          "type": "integer"
+      },
+      "is-email": {
+          "type": "string"
+      },
+      "is-boolean":
+      {
+        "type": "boolean"
+      }
+    }
+  }
+  

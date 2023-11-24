@@ -1,0 +1,26 @@
+
+
+{
+    "type": "object",
+    "properties": 
+    {
+      "userId":{ "$ref": "#/definitions/is-number" },
+      "password":{ "$ref": "#/definitions/string" },
+      "needChangePassword":{ "$ref": "#/definitions/is-number" },
+      "status":{ "$ref": "#/definitions/is-number" }
+    },
+    "required": ["userId","password", "needChangePassword","status"], 
+  "definitions": {
+      "string": {
+          "type": "string",
+          "minLength": 1
+      },
+      "is-number": {
+          "type": "integer"
+      },
+      "is-email": {
+          "type": "string"
+      }
+    }
+  }
+  
